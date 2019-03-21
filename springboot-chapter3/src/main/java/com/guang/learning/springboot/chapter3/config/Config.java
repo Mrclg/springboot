@@ -1,4 +1,4 @@
-package com.guang.learning.springboot.chapter1.config;
+package com.guang.learning.springboot.chapter3.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

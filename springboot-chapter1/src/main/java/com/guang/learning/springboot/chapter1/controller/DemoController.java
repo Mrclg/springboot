@@ -1,20 +1,16 @@
 package com.guang.learning.springboot.chapter1.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.guang.learning.springboot.chapter1.config.Config;
-import com.guang.learning.springboot.chapter1.entity.Student;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 //@RestController = @Controller + @ResponseBody 默认直接返回json
+//是Spring4之后加入的注解，原来在@Controller中返回json需要@ResponseBody来配合，
+//如果直接用@RestController替代@Controller就不需要再配置@ResponseBody，默认返回json格式。
 @RestController
 @Slf4j
 public class DemoController {
-
-    @Autowired
-    private Config config;
 
     /**
      * @GetMapping 等同于 @RequestMapping(method = RequestMethod.GET)
@@ -25,12 +21,12 @@ public class DemoController {
     public String demoGetMapping(){
         return "hello,GetMapping!";
     }
-
     @RequestMapping(value = "/demoRequestMapping", method = RequestMethod.GET)
     public String demoRequestMapping() {
-        log.info("config={}", config.toString());
         return "hello,RequestMapping!";
     }
+
+
 
     /**
      * post请求
@@ -54,16 +50,6 @@ public class DemoController {
         return map.toString();
     }
 
-    /**
-     * @RestController 是Spring4之后加入的注解，原来在@Controller中返回json需要@ResponseBody来配合，
-     * 如果直接用@RestController替代@Controller就不需要再配置@ResponseBody，默认返回json格式。
-     * @return
-     */
-    @RequestMapping(value = "/demoResponseBody")
-    @ResponseBody
-    public Student demoResponseBody(){
-        return new Student(12,"hello");
-    }
 
     @GetMapping(value = "/demoPathVariable/{param}")
     public String demoPathVariable(@PathVariable("param") String param){

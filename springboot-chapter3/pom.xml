@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.guang.learning</groupId>
-	<artifactId>springboot-chapter1</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.guang.learning</groupId>
+    <artifactId>springboot-chapter3</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>springboot-chapter1</name>
-	<description>Spring Boot | 第一章：第一个SpringBoot应用</description>
+    <name>springboot-chapter3</name>
+    <description>Spring Boot | 第三章：springboot配置详解</description>
 
     <parent>
         <groupId>com.guang.learning</groupId>
@@ -18,7 +18,11 @@
     </parent>
 
 	<dependencies>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true </optional>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -29,6 +33,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>

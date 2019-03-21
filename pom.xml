@@ -5,8 +5,8 @@
 
 	<groupId>com.guang.learning</groupId>
 	<artifactId>springboot</artifactId>
+    <packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
 
 	<name>springboot</name>
 	<description>Spring Boot</description>
@@ -17,6 +17,12 @@
 		<version>2.0.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
+    <modules>
+        <module>springboot-chapter1</module>
+        <module>springboot-chapter2</module>
+        <module>springboot-chapter3</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
