@@ -26,6 +26,7 @@
         <module>springboot-chapter5</module>
         <module>springboot-chapter6</module>
         <module>springboot-chapter7</module>
+        <module>springboot-chapter8</module>
     </modules>
 
 	<properties>
